@@ -1,0 +1,42 @@
+Routing
+---
+  Step 0: 
+    Identify the urls 
+      localhost:4200/             -- HomeComponent 
+      localhost:4200/contacts     -- ContactsComponent 
+      localhost:4200/about        -- AboutComponent 
+    
+    ng g c home -it -is 
+    ng g c contacts -is 
+    ng g c about -is 
+
+
+  Step 1: 
+    Setup URL in menu.comp.html 
+    
+  Step 2: 
+    Config the routes in app-routing.module.ts 
+
+  Step 3: 
+    Register the above Config routes 
+  
+  Step 4: 
+    Let's display the component in b/w header and footer 
+    using <router-outlet><router-outlet> 
+    in app.comp.html 
+  
+  Step 5: 
+    Check the app, the page will refresh. Let's fix it. 
+    in menu.comp.html
+    replace href with routerLink 
+  
+  Step 6:
+    Setup active menu in menu.comp.html 
+    add routerLinkActive="active" in all li's 
+
+  Step 7: 
+      Check the app. Home will be always active. LEt's fix it 
+    
+      in first li add the following 
+      [routerLinkActiveOptions]="{ exact: true }"
+
